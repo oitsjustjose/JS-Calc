@@ -1,0 +1,12 @@
+$background: #252525;
+$foreground: #eeeeee;
+
+@import "../calc";
+
+body {
+  background-color: $background;
+}
+
+* {
+  color: $foreground;
+}
