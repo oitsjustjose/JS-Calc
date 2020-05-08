@@ -22,15 +22,15 @@ const toggle = () => {
     if (mode == "dark") {
         window.localStorage.setItem("theme", "moonlight");
         mode = "moonlight";
-        css.href = "../css/themes/moonlight.css";
+        css.href = "./css/themes/moonlight.css";
     } else if (mode == "moonlight") {
         window.localStorage.setItem("theme", "light");
         mode = "light";
-        css.href = "../css/themes/light.css";
+        css.href = "./css/themes/light.css";
     } else {
         window.localStorage.setItem("theme", "dark");
         mode = "dark";
-        css.href = "../css/themes/dark.css";
+        css.href = "./css/themes/dark.css";
     }
     updateIcon();
 };
@@ -54,11 +54,11 @@ window.addEventListener("DOMContentLoaded", (evt) => {
     mode = window.localStorage.getItem("theme");
 
     if (mode == "dark") {
-        css.href = "../css/themes/dark.css";
+        css.href = "./css/themes/dark.css";
     } else if (mode == "moonlight") {
-        css.href = "../css/themes/moonlight.css";
+        css.href = "./css/themes/moonlight.css";
     } else {
-        css.href = "../css/themes/light.css";
+        css.href = "./css/themes/light.css";
     }
     updateIcon();
 });
