@@ -5,6 +5,7 @@
 
 let display = document.querySelector("input.view");
 let justEvaled = false;
+const validOpts = Array()
 
 const isNumeric = (val) => {
     return !isNaN(parseInt(val));
@@ -43,6 +44,24 @@ const init = () => {
             }
         });
     });
+
+    document.querySelectorAll('td').forEach((btn) => {
+        validOpts.push(btn.innerText);
+    });
 };
 
-init();
+display.addEventListener('input', () => {
+    let newVal = String();
+
+    for (let char of display.value) {
+        if (validOpts.includes(char)) {
+            newVal += char;
+        }
+    }
+
+    display.value = newVal;
+});
+
+window.addEventListener('load', () => {
+    init();
+});
